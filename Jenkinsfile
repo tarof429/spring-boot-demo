@@ -4,8 +4,6 @@ pipeline {
     }
 
     tools {
-//         tool name: 'Default', type: 'git'
-//         tool name: 'default', type: 'maven'
         maven 'default-maven'
         git 'default-git'
     }
