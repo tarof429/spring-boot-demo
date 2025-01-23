@@ -6,8 +6,8 @@ pipeline {
     tools {
 //         tool name: 'Default', type: 'git'
 //         tool name: 'default', type: 'maven'
-        tool name: 'default-git', type: 'git'
-        tool name: 'default-maven', type: 'maven'
+        maven 'default-maven'
+        git 'default-git'
     }
 
     stages {
