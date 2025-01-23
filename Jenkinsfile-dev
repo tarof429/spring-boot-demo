@@ -1,0 +1,24 @@
+pipeline {
+    agent {
+        label 'jenkins-node'
+    }
+
+    tools {
+        maven 'default-maven'
+        git 'default-git'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'devel-build', url: 'git@github.com:tarof429/spring-boot-demo.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh "mvn clean package"
+            }
+        }
+    }
+}
+
