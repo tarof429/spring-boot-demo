@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'devel-build', url: 'git@github.com:tarof429/spring-boot-demo.git'
+                git branch: 'devel/build', url: 'git@github.com:tarof429/spring-boot-demo.git'
             }
         }
         stage('Build') {
