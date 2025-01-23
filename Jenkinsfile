@@ -1,13 +1,19 @@
 pipeline {
     agent {
-    label 'jenkins-node'
+        label 'jenkins-node'
     }
 
 
     stages {
-        stage('Hello') {
+        stage('Checkout') {
             steps {
-                echo 'Hello World'
+                git branch: 'devel/jenkinsfile', url: 'git@github.com:tarof429/spring-boot-demo.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                //echo 'Hello World'
+                sh "mvn clean package"
             }
         }
     }
