@@ -3,6 +3,10 @@ pipeline {
         label 'jenkins-node'
     }
 
+    tools {
+        tool name: 'Default', type: 'git'
+        tool name: 'default', type: 'maven'
+    }
 
     stages {
         stage('Checkout') {
@@ -18,3 +22,4 @@ pipeline {
         }
     }
 }
+
