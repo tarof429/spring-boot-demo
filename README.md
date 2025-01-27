@@ -2,7 +2,7 @@
 
 Example Spring Boot application based on https://spring.io/guides/gs/spring-boot. 
 
-## Building
+## Building Locally
 
 To build the jar file, run:
 
@@ -16,7 +16,11 @@ To build the docker image, run:
 docker build -t tarof429/spring-boot-demo:latest .
 ```
 
-## Running,
+## Building with Jenkins
+
+This project includes some Jenkinsfiles that will build the jar file.
+
+## Running
 
 To run the application, run:
 
